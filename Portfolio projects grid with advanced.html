@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Projects</title>
+
+    <style>
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            padding: 40px 7%;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #172554;
+        }
+
+        header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        /* Projects Section */
+        .projects {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .projects h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        /* Advanced CSS Grid */
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            grid-auto-rows: 220px;
+
+            gap: 22px;
+        }
+
+        /* Project Card */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Card Images */
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 15px;
+            color: white;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.9)
+            );
+        }
+
+        .overlay h3 {
+            margin-bottom: 8px;
+            font-size: 21px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+        }
+
+        /* Different Grid Sizes */
+        .project-card:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .project-card:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            body {
+                padding: 25px 5%;
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+            }
+
+            .project-card:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            .project-card:nth-child(4) {
+                grid-column: span 2;
+            }
+        }
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 27px;
+            }
+            .project-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+            .project-card:first-child,
+            .project-card:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <p>My Creative Projects and Work</p>
+    </header>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900" alt="Dashboard project">
+                <div class="overlay">
+                    <h3>Portfolio Website</h3>
+                    <p>HTML, CSS and JavaScript</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600" alt="Mobile application">
+                <div class="overlay">
+                    <h3>Mobile App</h3>
+                    <p>App UI Design</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="Data analytics project">
+                <div class="overlay">
+                    <h3>Data Analytics</h3>
+                    <p>Python and Data Visualization</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="Online learning platform">
+                <div class="overlay">
+                    <h3>Online Learning Platform</h3>
+                    <p>Web Development Project</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600" alt="Programming project">
+                <div class="overlay">
+                    <h3>Programming Project</h3>
+                    <p>Java and Problem Solving</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

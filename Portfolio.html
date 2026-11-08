@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #14213d;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #00b4d8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #00b4d8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #dbeafe;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #14213d;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #023e8a;
+        }
+
+        section {
+            padding: 50px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #14213d;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills-list span {
+            background-color: #14213d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .project-card h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .education {
+            text-align: center;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <h2>Hello, I'm Your Name</h2>
+            <p>BTech CSE Student | Aspiring Software Developer</p>
+            <p>Welcome to my personal portfolio website.</p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science Engineering student.
+                I am interested in programming, web development,
+                and learning new technologies.
+                My goal is to become a skilled software developer.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <div class="skills-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Java</span>
+                <span>Python</span>
+                <span>Problem Solving</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-container">
+
+                <article class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        A personal website created using
+                        HTML and CSS to display my skills
+                        and projects.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Student Management System</h3>
+                    <p>
+                        A basic project to manage student
+                        details and academic information.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Calculator</h3>
+                    <p>
+                        A simple calculator project to
+                        perform basic mathematical operations.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <h2>Education</h2>
+
+            <article>
+                <h3>Bachelor of Technology (BTech)</h3>
+                <p>Computer Science and Engineering</p>
+                <p>Currently Pursuing</p>
+            </article>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+
+            <form>
+                <input type="text" placeholder="Enter Your Name" required>
+
+                <input type="email" placeholder="Enter Your Email" required>
+
+                <textarea rows="5" placeholder="Write Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+        <p>Designed using HTML5 and CSS3</p>
+    </footer>
+
+</body>
+</html>

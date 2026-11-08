@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Design Tokens and Typography</title>
+
+    <style>
+
+        :root {
+
+            --primary-color: #2563eb;
+            --secondary-color: #0f172a;
+            --background-color: #f8fafc;
+            --text-color: #334155;
+            --white-color: #ffffff;
+            --success-color: #16a34a;
+
+            --font-family: Arial, sans-serif;
+
+            --font-small: 14px;
+            --font-medium: 18px;
+            --font-large: 24px;
+            --font-heading: 36px;
+
+            --regular: 400;
+            --bold: 700;
+
+            --space-small: 10px;
+            --space-medium: 20px;
+            --space-large: 40px;
+
+            --radius-small: 5px;
+            --radius-medium: 10px;
+            --radius-large: 20px;
+
+            --box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: var(--font-heading);
+            font-weight: var(--bold);
+            color: var(--secondary-color);
+        }
+
+        h2 {
+            font-size: var(--font-large);
+            font-weight: var(--bold);
+            color: var(--primary-color);
+            margin-bottom: var(--space-medium);
+        }
+
+        h3 {
+            font-size: var(--font-medium);
+            font-weight: var(--bold);
+        }
+
+        p {
+            font-size: var(--font-small);
+            font-weight: var(--regular);
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: var(--space-medium);
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--white-color);
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: var(--space-large);
+        }
+
+        section {
+            background-color: var(--white-color);
+            padding: var(--space-large);
+            margin-bottom: var(--space-large);
+            border-radius: var(--radius-medium);
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: var(--space-small) var(--space-medium);
+            border-radius: var(--radius-small);
+            text-decoration: none;
+            font-weight: var(--bold);
+            margin-top: var(--space-medium);
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .card {
+            background-color: var(--background-color);
+            padding: var(--space-medium);
+            border-radius: var(--radius-large);
+            margin-top: var(--space-medium);
+        }
+
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: var(--space-medium);
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 28px;
+            }
+
+            main {
+                padding: var(--space-medium);
+            }
+
+            section {
+                padding: var(--space-medium);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Design System</h1>
+        <p>Design Tokens and Typography in CSS</p>
+    </header>
+   
+    <main>
+
+        <section>
+            <h2>Welcome to My Design System</h2>
+
+            <p>
+                This webpage demonstrates how CSS design tokens
+                and typography systems work together.
+                We use reusable variables for colors, spacing,
+                font sizes and other design properties.
+            </p>
+
+            <a href="#" class="btn">Explore More</a>
+        </section>
+
+        <section>
+            <h2>Typography System</h2>
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+
+            <p>
+                This is a paragraph showing regular text.
+                Typography makes website content readable
+                and visually attractive.
+            </p>
+        </section>
+
+        <section>
+            <h2>Design Tokens</h2>
+
+            <div class="card">
+                <h3>Primary Color</h3>
+                <p>Blue color used for buttons and highlights.</p>
+            </div>
+
+            <div class="card">
+                <h3>Spacing</h3>
+                <p>Reusable spacing values used throughout the website.</p>
+            </div>
+
+            <div class="card">
+                <h3>Border Radius</h3>
+                <p>Used to make cards and buttons rounded.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 My Design System</p>
+    </footer>
+
+</body>
+</html>
